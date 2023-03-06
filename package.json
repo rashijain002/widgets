@@ -1,7 +1,6 @@
 {
-  "homepage":"https://rashijain002.github.io/widgets/",
+  "homepage": "https://rashijain002.github.io/widgets/",
   "name": "widgets",
-  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
