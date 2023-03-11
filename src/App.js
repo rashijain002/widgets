@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Accordion from './Components/Accordion';
 import Search from './Components/Search';
+import Dropdown from './Components/Dropdown';
+import Translate from './Components/Translate';
 const items=[
     { 
         title:"what is react",
@@ -15,11 +17,21 @@ const items=[
         content :"You use react by creating componennts"
     },
 ];
-export default()=>{
+const options=[
+{label:'the color is red',
+color:'red'},
+{label:'the color is blue',
+color:'Blue'},
+{label:'the shade of blue',
+color:'blue'
+},
+];
 
+export default()=>{
     return(
     <div>
-        <Search/>
+      <Translate/>
         </div>
+        
     );
-}
+};

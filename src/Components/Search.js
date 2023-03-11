@@ -17,14 +17,19 @@ const Search=()=>{
         });
         setResults(data.query.search);
         };
-        const timeoutId =setTimeout(()=>{
-            if(term){
-                Search();
-            }
-        },100); 
-        return()=>{
-            clearTimeout(timeoutId);
-        }       
+        if(term && !results.length){
+            Search();
+        }else{
+            const timeoutId =setTimeout(()=>{
+                if(term){
+                    Search();
+                }
+            },100); 
+            return()=>{
+                clearTimeout(timeoutId);
+            };
+        }
+           
     },[term]);
 
     const renderedResults=results.map((result)=>{
