@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import Dropdown from "./Dropdown";
-import convert from "./convert";
+import Convert from "./Convert";
 const options=[
     {
         label:'Afrikaans',
@@ -40,7 +40,7 @@ const Translate=()=>{
             options={options}/>
             <hr/>
             <h3 className="ui header">Output</h3>
-            <convert text ={text} language={language}/>
+            <Convert text ={text} language={language}/>
         </div>
     );
 
